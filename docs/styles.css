@@ -97,50 +97,28 @@ p a,
 
 .brand {
   display: inline-flex;
-  height: 38px;
-  align-items: flex-end;
+  min-height: 38px;
+  align-items: baseline;
   color: var(--ink);
-}
-
-.brand-word,
-.brand-ascii {
-  margin-bottom: 4px;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
+  gap: 9px;
 }
 
 .brand-word {
-  margin-right: 10px;
-}
-
-.brand-ascii {
-  width: 6ch;
-  margin-right: 8px;
-  color: var(--accent);
-  font-weight: 600;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
   letter-spacing: 0;
-  text-align: left;
+  text-shadow: 0 0 18px rgba(225, 121, 9, 0.34);
 }
 
-.brand-rule {
-  display: inline-block;
-  width: 2px;
-  height: 38px;
-  background: var(--accent);
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
+.brand-note {
+  color: var(--ink-50);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .site-nav {
@@ -499,6 +477,11 @@ code {
   .site-header {
     justify-content: space-between;
     margin-bottom: 24px;
+  }
+
+  .brand {
+    flex-wrap: wrap;
+    gap: 7px;
   }
 
   .site-nav {

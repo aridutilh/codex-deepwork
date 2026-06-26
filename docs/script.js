@@ -1,27 +1,24 @@
-const asciiLogo = document.querySelector("[data-ascii-logo]");
+const morphWord = document.querySelector("[data-morph-word]");
 
-if (asciiLogo) {
-  const frames = [
-    "[...]",
-    "[::]",
-    "[//]",
-    "[==]",
-    "[++]",
-    "[##]",
-    "{..}",
-    "{<>}",
-    "<//>",
-    "<==>",
-    "::_",
-    "::|",
-    "::/",
-    "::-",
-  ];
-
-  let frameIndex = 0;
+if (morphWord) {
+  const finalText = morphWord.dataset.morphWord || morphWord.textContent;
+  const glyphs = ["D", "e", "p", "w", "o", "r", "k", "/", "\\", "|", "_", "-", "+", "*", ":", ".", "~"];
+  let tick = 0;
 
   window.setInterval(() => {
-    frameIndex = (frameIndex + 1) % frames.length;
-    asciiLogo.textContent = frames[frameIndex];
-  }, 140);
+    tick += 1;
+
+    const letters = Array.from(finalText, (letter, index) => {
+      const wave = (tick + index * 2) % 18;
+      if (wave < 4) {
+        return glyphs[(tick + index * 5) % glyphs.length];
+      }
+      if (wave === 4) {
+        return letter.toLowerCase();
+      }
+      return letter;
+    });
+
+    morphWord.textContent = letters.join("");
+  }, 95);
 }
