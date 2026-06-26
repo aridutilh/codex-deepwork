@@ -98,18 +98,30 @@ p a,
 .brand {
   display: inline-flex;
   height: 38px;
-  align-items: stretch;
+  align-items: flex-end;
   color: var(--ink);
 }
 
-.brand-glyph {
-  align-self: flex-end;
-  margin-right: 8px;
+.brand-word,
+.brand-ascii {
   margin-bottom: 4px;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1;
+}
+
+.brand-word {
+  margin-right: 10px;
+}
+
+.brand-ascii {
+  width: 6ch;
+  margin-right: 8px;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: left;
 }
 
 .brand-rule {
