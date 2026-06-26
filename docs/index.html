@@ -11,89 +11,97 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Codex Deepwork home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>Codex Deepwork</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#why">Why</a>
-        <a href="#install">Install</a>
-        <a href="#credit">Credit</a>
-      </nav>
-    </header>
+    <div class="page">
+      <main class="hero" id="top" aria-labelledby="hero-title">
+        <header class="site-header">
+          <a class="brand" href="#top" aria-label="Codex Deepwork home">
+            <span class="brand-glyph" aria-hidden="true">cd</span>
+            <span class="brand-rule" aria-hidden="true"></span>
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a class="pill pill-ghost" href="https://github.com/aridutilh/codex-deepwork">GitHub</a>
+            <a class="pill pill-outline" href="#install">Install</a>
+          </nav>
+        </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Open-source Codex plugin</p>
-          <h1 id="hero-title">Structured workflows for Codex teams</h1>
-          <p class="lede">
-            Codex Deepwork packages skills, hooks, and MCP configuration so Codex can run repeatable, quality-gated project workflows in any repository.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#install">Install</a>
-            <a class="button secondary" href="#why">How it works</a>
-          </div>
+        <h1 class="headline" id="hero-title">Deepwork-style workflows for Codex</h1>
+
+        <div class="cta">
+          <a class="download" href="#install" aria-label="Install Codex Deepwork">
+            <span class="download-mark" aria-hidden="true">+</span>
+            <span>Install plugin</span>
+          </a>
+          <span class="alpha-pill">Open source</span>
+          <span class="version">v0.1.0</span>
         </div>
-      </section>
 
-      <section id="why" class="band">
-        <div class="inner two-up">
-          <div>
-            <p class="section-kicker">Why</p>
-            <h2>More durable than a giant prompt</h2>
+        <p class="caption">Run repeatable, quality-gated jobs from any repo.</p>
+
+        <ul class="features" aria-label="Codex Deepwork features">
+          <li class="feature">
+            <span class="feature-label">Local</span>
+            <span class="feature-desc">starts the Deepwork MCP server on your machine</span>
+          </li>
+          <li class="feature">
+            <span class="feature-label">Portable</span>
+            <span class="feature-desc">plugin lives outside the repo; jobs stay inside it</span>
+          </li>
+          <li class="feature">
+            <span class="feature-label">Structured</span>
+            <span class="feature-desc">step outputs pass through workflow gates</span>
+          </li>
+          <li class="feature">
+            <span class="feature-label">Recordable</span>
+            <span class="feature-desc">turn recurring work into reusable jobs</span>
+          </li>
+          <li class="feature">
+            <span class="feature-label">Inspired by</span>
+            <span class="feature-desc"><a href="https://www.deepwork.md/">Deepwork</a> by Unsupervised</span>
+          </li>
+        </ul>
+      </main>
+
+      <aside class="screenshots" aria-label="Plugin details">
+        <section class="shot shot-map" aria-label="Workflow map preview">
+          <img src="./assets/workflow-map.png" alt="" />
+          <div class="shot-copy">
+            <span>adapter</span>
+            <strong>Codex talks MCP. Deepwork runs the workflow.</strong>
           </div>
-          <p>
-            A one-off prompt can work once. A Deepwork-style job preserves steps, quality gates, repo conventions, and lessons learned so the same workflow can run again with less drift.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      <section class="band">
-        <div class="inner feature-grid">
-          <article>
-            <h3>Run jobs</h3>
-            <p>Start, continue, and complete workflows through the Deepwork MCP runtime.</p>
-          </article>
-          <article>
-            <h3>Create jobs</h3>
-            <p>Turn recurring work into `.deepwork/jobs` with Codex-native instructions.</p>
-          </article>
-          <article>
-            <h3>Learn from runs</h3>
-            <p>Capture corrections and improve workflows after real project use.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="install" class="band install-band">
-        <div class="inner split">
-          <div>
-            <p class="section-kicker">Install</p>
-            <h2>Add it once, use it in any repo</h2>
-            <p>
-              The plugin lives outside your project. The jobs and generated outputs stay inside whichever repository Codex is working in.
-            </p>
-          </div>
-          <div class="terminal" role="region" aria-label="Install commands">
-            <pre><code>codex plugin marketplace add /path/to/codex-deepwork
+        <section class="shot terminal-shot" id="install" aria-label="Install commands">
+          <span class="shot-kicker">install</span>
+          <pre><code>git clone https://github.com/aridutilh/codex-deepwork.git
+cd codex-deepwork
+codex plugin marketplace add "$PWD"
 codex plugin add codex-deepwork@codex-deepwork</code></pre>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="credit" class="band">
-        <div class="inner two-up">
-          <div>
-            <p class="section-kicker">Credit</p>
-            <h2>Inspired by Deepwork for Claude Code</h2>
-          </div>
+        <section class="shot flow-shot" aria-label="Workflow loop">
+          <span class="shot-kicker">runtime loop</span>
+          <ol>
+            <li>get workflows</li>
+            <li>start step</li>
+            <li>write outputs</li>
+            <li>submit to quality gate</li>
+          </ol>
+        </section>
+
+        <section class="shot prompt-shot" aria-label="First prompt">
+          <span class="shot-kicker">first prompt</span>
+          <p>Use Deepwork to show me available workflows in this repo.</p>
+        </section>
+
+        <section class="shot credit-shot" aria-label="Credit">
+          <span class="shot-kicker">credit</span>
           <p>
-            This adapter is inspired by <a href="https://www.deepwork.md/">Deepwork</a> by Unsupervised and the <a href="https://github.com/Unsupervisedcom/deepwork">Deepwork for Claude Code</a> project. It does not copy or reimplement the runtime; it invokes the installed Deepwork MCP server from Codex.
+            Inspired by <a href="https://www.deepwork.md/">Deepwork</a> and the
+            <a href="https://github.com/Unsupervisedcom/deepwork">Claude Code project</a>
+            by Unsupervised.
           </p>
-        </div>
-      </section>
-    </main>
+        </section>
+      </aside>
+    </div>
   </body>
 </html>
