@@ -14,9 +14,9 @@ if [ -z "$stack" ]; then
   exit 0
 fi
 
-context="# DeepWork Context Restored
+context="# Deepwork Context Restored
 
-An active DeepWork workflow may exist in this project. Use the DeepWork MCP tools to continue it. Pass the restored session_id to finished_step, go_to_step, or abort_workflow.
+An active Deepwork workflow may exist in this project. Use the Deepwork MCP tools to continue it. Pass the restored session_id to finished_step, go_to_step, or abort_workflow.
 
 \`\`\`text
 $stack

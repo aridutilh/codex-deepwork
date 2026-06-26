@@ -1,16 +1,16 @@
 ---
 name: deepwork-new-user
-description: Onboard a Codex user to DeepWork in a repo and verify that the MCP runtime is usable.
+description: Onboard a Codex user to Deepwork in a repo and verify that the MCP runtime is usable.
 ---
 
-# DeepWork Onboarding For Codex
+# Deepwork Onboarding For Codex
 
-Use this when the user is new to DeepWork or asks how to use it from Codex.
+Use this when the user is new to Deepwork or asks how to use it from Codex.
 
 ## Steps
 
 1. Check that `uvx` is available.
-2. Call `get_workflows` if the DeepWork MCP server is available.
+2. Call `get_workflows` if the Deepwork MCP server is available.
 3. Explain the three core surfaces in plain language:
    - Workflows: repeatable multi-step jobs in `.deepwork/jobs`.
    - Reviews: repo-specific review rules and generated checks.

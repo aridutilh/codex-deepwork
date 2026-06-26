@@ -1,9 +1,9 @@
 ---
 name: deepwork-new-job
-description: Create a new repeatable DeepWork job from Codex using the upstream new-job workflow.
+description: Create a new repeatable Deepwork job from Codex using the upstream new-job workflow.
 ---
 
-# Create A DeepWork Job
+# Create A Deepwork Job
 
 Use this when the user wants to create a new repeatable workflow, job, playbook, or process for a repo.
 
@@ -18,7 +18,7 @@ Use this when the user wants to create a new repeatable workflow, job, playbook,
 2. Call `get_workflows`.
 3. Prefer the upstream `deepwork_jobs/new_job` workflow when available.
 4. Start it with `start_workflow`.
-5. Follow each DeepWork step exactly.
+5. Follow each Deepwork step exactly.
 6. Write job files only where the workflow instructs, normally under `.deepwork/jobs/<job_name>/`.
 7. Call `finished_step` after each completed step.
 

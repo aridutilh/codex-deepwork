@@ -1,7 +1,7 @@
 {
   "name": "codex-deepwork",
   "interface": {
-    "displayName": "Codex DeepWork"
+    "displayName": "Codex Deepwork"
   },
   "plugins": [
     {

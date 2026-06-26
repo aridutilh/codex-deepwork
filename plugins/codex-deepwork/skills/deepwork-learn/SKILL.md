@@ -1,6 +1,6 @@
 ---
 name: deepwork-learn
-description: Improve an existing DeepWork job after a completed or corrected run.
+description: Improve an existing Deepwork job after a completed or corrected run.
 ---
 
 # Learn From A Workflow Run

@@ -1,11 +1,11 @@
 ---
 name: deepwork
-description: Start, continue, inspect, or complete DeepWork workflows from Codex using the DeepWork MCP tools.
+description: Start, continue, inspect, or complete Deepwork workflows from Codex using the Deepwork MCP tools.
 ---
 
-# DeepWork In Codex
+# Deepwork In Codex
 
-Use the DeepWork MCP server as the source of truth for workflow execution. Do not freehand workflow state from files when MCP tools are available.
+Use the Deepwork MCP server as the source of truth for workflow execution. Do not freehand workflow state from files when MCP tools are available.
 
 ## Operating Loop
 
@@ -14,12 +14,12 @@ Use the DeepWork MCP server as the source of truth for workflow execution. Do no
 3. If several workflows fit equally well, ask one concise clarification.
 4. Start the workflow with `start_workflow`.
    - In Codex, omit `session_id` when starting unless the current tool instructions explicitly provide one.
-   - After starting, use the returned `begin_step.session_id` for every later DeepWork MCP call.
-5. Follow the step instructions returned by DeepWork.
+   - After starting, use the returned `begin_step.session_id` for every later Deepwork MCP call.
+5. Follow the step instructions returned by Deepwork.
 6. When a step output is ready, call `finished_step` with the required outputs and a short `work_summary`.
-7. If DeepWork returns `needs_work`, fix the issues and call `finished_step` again.
-8. If DeepWork returns `next_step`, continue with the new instructions.
-9. If DeepWork returns `workflow_complete`, summarize outputs and any post-workflow instructions for the user.
+7. If Deepwork returns `needs_work`, fix the issues and call `finished_step` again.
+8. If Deepwork returns `next_step`, continue with the new instructions.
+9. If Deepwork returns `workflow_complete`, summarize outputs and any post-workflow instructions for the user.
 
 ## User Intent
 

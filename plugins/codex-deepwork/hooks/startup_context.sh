@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-context="Codex DeepWork is installed. Use DeepWork MCP tools as the source of truth for workflow state. When starting a workflow in Codex, omit session_id unless the current tool instructions provide one. After start_workflow returns begin_step.session_id, pass that session_id to all later DeepWork calls."
+context="Codex Deepwork is installed. Use Deepwork MCP tools as the source of truth for workflow state. When starting a workflow in Codex, omit session_id unless the current tool instructions provide one. After start_workflow returns begin_step.session_id, pass that session_id to all later Deepwork calls."
 
 if command -v jq >/dev/null 2>&1; then
   jq -n --arg ctx "$context" '{hookSpecificOutput: {hookEventName: "SessionStart", additionalContext: $ctx}}'

@@ -1,15 +1,15 @@
 # Contributing
 
-Thanks for helping make Codex DeepWork useful.
+Thanks for helping make Codex Deepwork useful.
 
-This project is intentionally small. It should remain a Codex adapter around the upstream DeepWork runtime, not a competing runtime implementation.
+This project is intentionally small. It should remain a Codex adapter around the upstream Deepwork runtime, not a competing runtime implementation.
 
 ## Principles
 
-- Keep DeepWork MCP as the source of workflow truth.
+- Keep Deepwork MCP as the source of workflow truth.
 - Keep repo-specific jobs in the target repo under `.deepwork/jobs`.
 - Keep plugin code generic enough to work across projects.
-- Credit upstream DeepWork when behavior is inspired by it.
+- Credit upstream Deepwork when behavior is inspired by it.
 - Avoid copying upstream implementation code.
 
 ## Good Contributions
@@ -28,4 +28,4 @@ Before opening a PR:
 - Validate the plugin manifest.
 - Check that no generated or local session files are committed.
 - Confirm install instructions still work from a fresh checkout.
-- Make sure docs distinguish this adapter from the upstream DeepWork project.
+- Make sure docs distinguish this adapter from the upstream Deepwork project.

@@ -7,7 +7,7 @@
           {
             "type": "command",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/startup_context.sh",
-            "statusMessage": "Preparing DeepWork context"
+            "statusMessage": "Preparing Deepwork context"
           }
         ]
       },
@@ -17,7 +17,7 @@
           {
             "type": "command",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/post_compact.sh",
-            "statusMessage": "Restoring DeepWork workflow context"
+            "statusMessage": "Restoring Deepwork workflow context"
           }
         ]
       }
@@ -29,7 +29,7 @@
           {
             "type": "command",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/post_commit_reminder.sh",
-            "statusMessage": "Checking DeepWork review reminder"
+            "statusMessage": "Checking Deepwork review reminder"
           }
         ]
       },
@@ -39,7 +39,7 @@
           {
             "type": "command",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/deepschema_write.sh",
-            "statusMessage": "Checking DeepWork schemas"
+            "statusMessage": "Checking Deepwork schemas"
           }
         ]
       }

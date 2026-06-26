@@ -1,11 +1,11 @@
 ---
 name: deepwork-record
-description: Record a workflow by doing it once, then turn the observed process into a repeatable DeepWork job.
+description: Record a workflow by doing it once, then turn the observed process into a repeatable Deepwork job.
 ---
 
 # Record A Workflow
 
-Use this when the user wants Codex to perform a process once and convert it into a reusable DeepWork job.
+Use this when the user wants Codex to perform a process once and convert it into a reusable Deepwork job.
 
 ## Record Mode
 
@@ -17,7 +17,7 @@ Use this when the user wants Codex to perform a process once and convert it into
    - sequencing that should be preserved
    - project conventions that were easy to miss
 3. After the run, summarize the observed process.
-4. Ask whether to turn the observed process into a DeepWork job.
+4. Ask whether to turn the observed process into a Deepwork job.
 5. If yes, use the `deepwork_jobs/new_job` workflow when available.
 
 ## What To Capture

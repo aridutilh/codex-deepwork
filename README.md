@@ -1,6 +1,6 @@
-# Codex DeepWork
+# Codex Deepwork
 
-Codex DeepWork is an open-source Codex plugin that brings DeepWork-style structured workflows to Codex.
+Codex Deepwork is an open-source Codex plugin that brings Deepwork-style structured workflows to Codex.
 
 It is designed for teams that want repeatable, quality-gated project workflows in Codex: create jobs, run jobs, record new workflows, learn from completed runs, and apply review or schema checks inside the current repository.
 
@@ -8,21 +8,21 @@ It is designed for teams that want repeatable, quality-gated project workflows i
 
 This project is an early adapter prototype.
 
-It does not reimplement the DeepWork runtime. Instead, it packages Codex skills, hooks, and MCP configuration around the existing `deepwork` MCP server.
+It does not reimplement the Deepwork runtime. Instead, it packages Codex skills, hooks, and MCP configuration around the existing `deepwork` MCP server.
 
 ## Credit
 
-This project is inspired by and built to interoperate with [DeepWork](https://www.deepwork.md/) by Unsupervised, including the [Unsupervisedcom/deepwork](https://github.com/Unsupervisedcom/deepwork) plugin and workflow runtime originally built for Claude Code.
+This project is inspired by and built to interoperate with [Deepwork](https://www.deepwork.md/) by Unsupervised, including the [Unsupervisedcom/deepwork](https://github.com/Unsupervisedcom/deepwork) plugin and workflow runtime originally built for Claude Code.
 
-DeepWork is a separate project with its own license. This repository provides a Codex-native adapter and does not copy or vendor the DeepWork runtime.
+Deepwork is a separate project with its own license. This repository provides a Codex-native adapter and does not copy or vendor the Deepwork runtime.
 
 ## Why This Exists
 
 Codex can handle a one-off prompt well. For example, you can give Codex a podcast transcript and ask it to draft launch content.
 
-That is different from a repeatable DeepWork job.
+That is different from a repeatable Deepwork job.
 
-A DeepWork job can encode:
+A Deepwork job can encode:
 
 - a required sequence of steps
 - persistent workflow state
@@ -56,7 +56,7 @@ Then restart Codex or open a new thread.
 
 ## Use In A Project
 
-After installation, open Codex in any repository that has DeepWork jobs, such as:
+After installation, open Codex in any repository that has Deepwork jobs, such as:
 
 ```text
 your-project/
@@ -68,13 +68,13 @@ your-project/
 Then ask Codex:
 
 ```text
-Use DeepWork to show me available workflows.
+Use Deepwork to show me available workflows.
 ```
 
 or:
 
 ```text
-Create a new DeepWork job for our weekly content launch workflow.
+Create a new Deepwork job for our weekly content launch workflow.
 ```
 
 or:
@@ -88,11 +88,11 @@ The plugin lives outside the target repo. The jobs and generated work products l
 ## What The Plugin Adds
 
 - `deepwork`: start, continue, inspect, and complete workflows
-- `deepwork-new-user`: onboard a Codex user to a repo's DeepWork setup
+- `deepwork-new-user`: onboard a Codex user to a repo's Deepwork setup
 - `deepwork-new-job`: create a new repeatable workflow
 - `deepwork-record`: do a process once and convert it into a job
 - `deepwork-learn`: improve a job after a completed or corrected run
-- `deepwork-review`: run DeepWork review and schema checks
+- `deepwork-review`: run Deepwork review and schema checks
 
 It also bundles lifecycle hooks for:
 
@@ -109,13 +109,13 @@ It also bundles lifecycle hooks for:
 
 ## Compatibility Note
 
-The bundled MCP config currently starts the upstream DeepWork server with:
+The bundled MCP config currently starts the upstream Deepwork server with:
 
 ```bash
 uvx deepwork serve --platform claude
 ```
 
-That flag is intentional for now. The current upstream DeepWork runtime has Claude-oriented review and hook formatting. Codex still talks to the server through MCP; the flag is a compatibility shim, not a Claude Code dependency.
+That flag is intentional for now. The current upstream Deepwork runtime has Claude-oriented review and hook formatting. Codex still talks to the server through MCP; the flag is a compatibility shim, not a Claude Code dependency.
 
 ## Repository Layout
 

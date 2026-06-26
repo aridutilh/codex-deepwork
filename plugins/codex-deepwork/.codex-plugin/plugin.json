@@ -1,7 +1,7 @@
 {
   "name": "codex-deepwork",
   "version": "0.1.0",
-  "description": "Run DeepWork-style workflows from Codex using the DeepWork MCP runtime.",
+  "description": "Run Deepwork-style workflows from Codex using the Deepwork MCP runtime.",
   "author": {
     "name": "Ari Dutilh"
   },
@@ -18,9 +18,9 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Codex DeepWork",
-    "shortDescription": "Structured DeepWork workflows for Codex.",
-    "longDescription": "A Codex-native adapter for the DeepWork MCP runtime. It gives Codex skills, lifecycle hooks, and installable plugin packaging for running, recording, reviewing, and improving repeatable project workflows.",
+    "displayName": "Codex Deepwork",
+    "shortDescription": "Structured Deepwork workflows for Codex.",
+    "longDescription": "A Codex-native adapter for the Deepwork MCP runtime. It gives Codex skills, lifecycle hooks, and installable plugin packaging for running, recording, reviewing, and improving repeatable project workflows.",
     "developerName": "Ari Dutilh",
     "category": "Productivity",
     "capabilities": [
@@ -30,9 +30,9 @@
     ],
     "websiteURL": "https://github.com/aridutilh/codex-deepwork",
     "defaultPrompt": [
-      "Show available DeepWork workflows",
-      "Create a new DeepWork job",
-      "Run DeepWork reviews"
+      "Show available Deepwork workflows",
+      "Create a new Deepwork job",
+      "Run Deepwork reviews"
     ],
     "brandColor": "#16A34A"
   }
