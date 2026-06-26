@@ -1,0 +1,39 @@
+{
+  "name": "codex-deepwork",
+  "version": "0.1.0",
+  "description": "Run DeepWork-style workflows from Codex using the DeepWork MCP runtime.",
+  "author": {
+    "name": "Solo Founders"
+  },
+  "homepage": "https://github.com/solo-founders/codex-deepwork",
+  "repository": "https://github.com/solo-founders/codex-deepwork",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "deepwork",
+    "mcp",
+    "workflow",
+    "quality-gates"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Codex DeepWork",
+    "shortDescription": "Structured DeepWork workflows for Codex.",
+    "longDescription": "A Codex-native adapter for the DeepWork MCP runtime. It gives Codex skills, lifecycle hooks, and installable plugin packaging for running, recording, reviewing, and improving repeatable project workflows.",
+    "developerName": "Solo Founders",
+    "category": "Productivity",
+    "capabilities": [
+      "MCP",
+      "Hooks",
+      "Skills"
+    ],
+    "websiteURL": "https://github.com/solo-founders/codex-deepwork",
+    "defaultPrompt": [
+      "Show available DeepWork workflows",
+      "Create a new DeepWork job",
+      "Run DeepWork reviews"
+    ],
+    "brandColor": "#16A34A"
+  }
+}

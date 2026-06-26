@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex DeepWork</title>
+    <meta
+      name="description"
+      content="An open-source Codex adapter for DeepWork-style structured workflows."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Codex DeepWork home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Codex DeepWork</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#why">Why</a>
+        <a href="#install">Install</a>
+        <a href="#credit">Credit</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Open-source Codex plugin</p>
+          <h1 id="hero-title">Structured workflows for Codex teams</h1>
+          <p class="lede">
+            Codex DeepWork packages skills, hooks, and MCP configuration so Codex can run repeatable, quality-gated project workflows in any repository.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#install">Install</a>
+            <a class="button secondary" href="#why">How it works</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="band">
+        <div class="inner two-up">
+          <div>
+            <p class="section-kicker">Why</p>
+            <h2>More durable than a giant prompt</h2>
+          </div>
+          <p>
+            A one-off prompt can work once. A DeepWork-style job preserves steps, quality gates, repo conventions, and lessons learned so the same workflow can run again with less drift.
+          </p>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="inner feature-grid">
+          <article>
+            <h3>Run jobs</h3>
+            <p>Start, continue, and complete workflows through the DeepWork MCP runtime.</p>
+          </article>
+          <article>
+            <h3>Create jobs</h3>
+            <p>Turn recurring work into `.deepwork/jobs` with Codex-native instructions.</p>
+          </article>
+          <article>
+            <h3>Learn from runs</h3>
+            <p>Capture corrections and improve workflows after real project use.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="install" class="band install-band">
+        <div class="inner split">
+          <div>
+            <p class="section-kicker">Install</p>
+            <h2>Add it once, use it in any repo</h2>
+            <p>
+              The plugin lives outside your project. The jobs and generated outputs stay inside whichever repository Codex is working in.
+            </p>
+          </div>
+          <div class="terminal" role="region" aria-label="Install commands">
+            <pre><code>codex plugin marketplace add /path/to/codex-deepwork
+codex plugin add codex-deepwork@codex-deepwork</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="credit" class="band">
+        <div class="inner two-up">
+          <div>
+            <p class="section-kicker">Credit</p>
+            <h2>Inspired by DeepWork for Claude Code</h2>
+          </div>
+          <p>
+            This adapter is inspired by Unsupervised's DeepWork project. It does not copy or reimplement the runtime; it invokes the installed DeepWork MCP server from Codex.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

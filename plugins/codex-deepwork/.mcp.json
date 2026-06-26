@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "deepwork": {
+      "command": "uvx",
+      "args": [
+        "deepwork",
+        "serve",
+        "--platform",
+        "claude"
+      ]
+    }
+  }
+}

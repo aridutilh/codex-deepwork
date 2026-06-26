@@ -1,0 +1,276 @@
+:root {
+  color-scheme: dark;
+  --bg: #08110f;
+  --panel: #101b18;
+  --panel-2: #15231f;
+  --text: #edf8f3;
+  --muted: #acc2ba;
+  --line: rgba(209, 250, 229, 0.16);
+  --green: #22c55e;
+  --teal: #14b8a6;
+  --amber: #f59e0b;
+  --blue: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px clamp(20px, 5vw, 72px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(8, 17, 15, 0.76);
+  backdrop-filter: blur(16px);
+}
+
+.brand,
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+.brand-mark {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--green), var(--teal));
+}
+
+.site-header nav a {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.site-header nav a:hover {
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 82vh;
+  align-items: center;
+  padding: 120px clamp(22px, 6vw, 96px) 88px;
+  background:
+    linear-gradient(90deg, rgba(8, 17, 15, 0.96) 0%, rgba(8, 17, 15, 0.74) 46%, rgba(8, 17, 15, 0.28) 100%),
+    url("./assets/workflow-map.png") center / cover no-repeat;
+}
+
+.hero::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  content: "";
+  background: linear-gradient(180deg, rgba(8, 17, 15, 0), var(--bg));
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 100%);
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 14px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-size: clamp(48px, 8vw, 92px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.lede {
+  max-width: 690px;
+  margin-bottom: 32px;
+  color: #d8ebe4;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0 18px;
+  font-weight: 700;
+}
+
+.button.primary {
+  background: var(--green);
+  color: #06110d;
+}
+
+.button.secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.band {
+  padding: clamp(64px, 8vw, 112px) clamp(22px, 6vw, 96px);
+  border-top: 1px solid var(--line);
+}
+
+.inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.two-up,
+.split {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.62fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.feature-grid article,
+.terminal {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.feature-grid article {
+  padding: 24px;
+}
+
+.feature-grid article:nth-child(2) {
+  background: var(--panel-2);
+}
+
+.feature-grid article:nth-child(3) {
+  border-color: rgba(245, 158, 11, 0.32);
+}
+
+.feature-grid p {
+  margin-bottom: 0;
+}
+
+.install-band {
+  background: #0c1714;
+}
+
+.terminal {
+  overflow: hidden;
+  background: #07100d;
+}
+
+pre {
+  margin: 0;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+code {
+  color: #d6f9e7;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    position: absolute;
+    align-items: flex-start;
+    gap: 18px;
+    flex-direction: column;
+  }
+
+  .site-header nav {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    min-height: 760px;
+    padding-top: 178px;
+  }
+
+  .two-up,
+  .split,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
