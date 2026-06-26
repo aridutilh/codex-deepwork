@@ -41,7 +41,7 @@
         <ul class="features" aria-label="Codex Deepwork features">
           <li class="feature">
             <span class="feature-label">Local</span>
-            <span class="feature-desc">starts the Deepwork MCP server on your machine</span>
+            <span class="feature-desc">starts Unsupervised's Deepwork MCP server locally</span>
           </li>
           <li class="feature">
             <span class="feature-label">Portable</span>
@@ -65,7 +65,7 @@
       <aside class="screenshots" aria-label="Plugin details">
         <section class="shot shot-map" aria-label="How Codex Deepwork works">
           <span class="shot-kicker">how it works</span>
-          <div class="system-map" role="img" aria-label="Codex uses the Codex Deepwork plugin to call the local Deepwork MCP server, which reads jobs and gates outputs in the current repository.">
+          <div class="system-map" role="img" aria-label="Codex uses the Codex Deepwork plugin to call the upstream Unsupervised Deepwork MCP server locally, using Claude-compatible platform mode. The server reads jobs and gates outputs in the current repository.">
             <div class="map-node map-node-codex">
               <span>01</span>
               <strong>Codex</strong>
@@ -80,8 +80,8 @@
             <div class="map-arrow" aria-hidden="true">starts</div>
             <div class="map-node map-node-runtime">
               <span>03</span>
-              <strong>Local Deepwork MCP</strong>
-              <p><code>uvx deepwork serve</code></p>
+              <strong>Upstream Deepwork MCP</strong>
+              <p><code>uvx deepwork serve --platform claude</code></p>
             </div>
             <div class="map-branch" aria-hidden="true"></div>
             <div class="map-node map-node-jobs">

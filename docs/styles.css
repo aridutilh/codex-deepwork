@@ -368,6 +368,7 @@ p a,
 .map-node code {
   font-size: 11px;
   line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .map-node-codex,
