@@ -62,11 +62,37 @@
       </main>
 
       <aside class="screenshots" aria-label="Plugin details">
-        <section class="shot shot-map" aria-label="Workflow map preview">
-          <img src="./assets/workflow-map.png" alt="" />
-          <div class="shot-copy">
-            <span>adapter</span>
-            <strong>Codex talks MCP. Deepwork runs the workflow.</strong>
+        <section class="shot shot-map" aria-label="How Codex Deepwork works">
+          <span class="shot-kicker">how it works</span>
+          <div class="system-map" role="img" aria-label="Codex uses the Codex Deepwork plugin to call the local Deepwork MCP server, which reads jobs and gates outputs in the current repository.">
+            <div class="map-node map-node-codex">
+              <span>01</span>
+              <strong>Codex</strong>
+              <p>you ask it to run or create a job</p>
+            </div>
+            <div class="map-arrow" aria-hidden="true">calls</div>
+            <div class="map-node map-node-plugin">
+              <span>02</span>
+              <strong>Codex Deepwork plugin</strong>
+              <p>skills, hooks, and MCP config</p>
+            </div>
+            <div class="map-arrow" aria-hidden="true">starts</div>
+            <div class="map-node map-node-runtime">
+              <span>03</span>
+              <strong>Local Deepwork MCP</strong>
+              <p><code>uvx deepwork serve</code></p>
+            </div>
+            <div class="map-branch" aria-hidden="true"></div>
+            <div class="map-node map-node-jobs">
+              <span>04</span>
+              <strong>.deepwork/jobs</strong>
+              <p>workflow steps live in your repo</p>
+            </div>
+            <div class="map-node map-node-gates">
+              <span>05</span>
+              <strong>Quality gates</strong>
+              <p>accept, reject, or advance outputs</p>
+            </div>
           </div>
         </section>
 
