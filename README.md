@@ -12,7 +12,7 @@ It does not reimplement the DeepWork runtime. Instead, it packages Codex skills,
 
 ## Credit
 
-This project is inspired by and built to interoperate with [Unsupervisedcom/deepwork](https://github.com/Unsupervisedcom/deepwork), the DeepWork plugin and workflow runtime originally built for Claude Code by Unsupervised.
+This project is inspired by and built to interoperate with [DeepWork](https://www.deepwork.md/) by Unsupervised, including the [Unsupervisedcom/deepwork](https://github.com/Unsupervisedcom/deepwork) plugin and workflow runtime originally built for Claude Code.
 
 DeepWork is a separate project with its own license. This repository provides a Codex-native adapter and does not copy or vendor the DeepWork runtime.
 
